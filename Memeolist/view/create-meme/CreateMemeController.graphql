@@ -1,0 +1,6 @@
+## Creating meme
+mutation CreateMeme($title: String!, $photoUrl: String!) {
+    createMeme(title: $title, photoUrl: $photoUrl) {
+    ...MemeDetails
+    }
+}

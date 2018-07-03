@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01CF3BA620EBA7C20026EC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BA520EBA7C20026EC7F /* AppDelegate.swift */; };
+		01CF3BA820EBA7C20026EC7F /* MemesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BA720EBA7C20026EC7F /* MemesListViewController.swift */; };
+		01CF3BAA20EBA7C20026EC7F /* CreateMemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BA920EBA7C20026EC7F /* CreateMemeController.swift */; };
+		01CF3BAD20EBA7C20026EC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CF3BAB20EBA7C20026EC7F /* Main.storyboard */; };
+		01CF3BAF20EBA7C30026EC7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CF3BAE20EBA7C30026EC7F /* Assets.xcassets */; };
+		01CF3BB220EBA7C30026EC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CF3BB020EBA7C30026EC7F /* LaunchScreen.storyboard */; };
+		01CF3BBD20EBA7C30026EC7F /* MemeolistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BBC20EBA7C30026EC7F /* MemeolistTests.swift */; };
+		01CF3BCE20EBC3D80026EC7F /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 01CF3BCC20EBC3D80026EC7F /* schema.json */; };
+		01CF3BCF20EBC3D80026EC7F /* MemesListViewController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 01CF3BCD20EBC3D80026EC7F /* MemesListViewController.graphql */; };
+		01CF3BD420EBC89F0026EC7F /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BD320EBC89F0026EC7F /* Meme.swift */; };
+		01CF3BD620EBCD760026EC7F /* CreateMemeController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 01CF3BD520EBCD760026EC7F /* CreateMemeController.graphql */; };
+		01CF3BD820EBD0D90026EC7F /* MemesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BD720EBD0D90026EC7F /* MemesTableViewCell.swift */; };
+		01CF3BE020EBE63F0026EC7F /* GeneratedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BDF20EBE63F0026EC7F /* GeneratedAPI.swift */; };
+		41C27A6CE869C9E2E9517155 /* Pods_Memeolist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EB0502C70202F5FE272F97 /* Pods_Memeolist.framework */; };
+		76E45495AEB965518F5E8E27 /* Pods_MemeolistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944BD0AFF97A08EC8B3F287D /* Pods_MemeolistTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01CF3BB920EBA7C30026EC7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CF3B9A20EBA7C20026EC7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01CF3BA120EBA7C20026EC7F;
+			remoteInfo = Memeolist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01CF3BA220EBA7C20026EC7F /* Memeolist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memeolist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CF3BA520EBA7C20026EC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01CF3BA720EBA7C20026EC7F /* MemesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesListViewController.swift; sourceTree = "<group>"; };
+		01CF3BA920EBA7C20026EC7F /* CreateMemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemeController.swift; sourceTree = "<group>"; };
+		01CF3BAC20EBA7C20026EC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01CF3BAE20EBA7C30026EC7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01CF3BB120EBA7C30026EC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01CF3BB320EBA7C30026EC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CF3BB820EBA7C30026EC7F /* MemeolistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeolistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CF3BBC20EBA7C30026EC7F /* MemeolistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeolistTests.swift; sourceTree = "<group>"; };
+		01CF3BBE20EBA7C30026EC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CF3BCC20EBC3D80026EC7F /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		01CF3BCD20EBC3D80026EC7F /* MemesListViewController.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MemesListViewController.graphql; sourceTree = "<group>"; };
+		01CF3BD320EBC89F0026EC7F /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		01CF3BD520EBCD760026EC7F /* CreateMemeController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateMemeController.graphql; sourceTree = "<group>"; };
+		01CF3BD720EBD0D90026EC7F /* MemesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemesTableViewCell.swift; sourceTree = "<group>"; };
+		01CF3BDF20EBE63F0026EC7F /* GeneratedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedAPI.swift; sourceTree = "<group>"; };
+		0C1F746F90DEF7248673F78D /* Pods-MemeolistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeolistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemeolistTests/Pods-MemeolistTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B4710A7D563656E8F61DA39 /* Pods-Memeolist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memeolist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memeolist/Pods-Memeolist.debug.xcconfig"; sourceTree = "<group>"; };
+		5E5DC583C41CD2D181C3EA79 /* Pods-MemeolistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeolistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemeolistTests/Pods-MemeolistTests.release.xcconfig"; sourceTree = "<group>"; };
+		67EB0502C70202F5FE272F97 /* Pods_Memeolist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memeolist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82C712065C38FFA0E20F0896 /* Pods-Memeolist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memeolist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memeolist/Pods-Memeolist.release.xcconfig"; sourceTree = "<group>"; };
+		944BD0AFF97A08EC8B3F287D /* Pods_MemeolistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemeolistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01CF3B9F20EBA7C20026EC7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41C27A6CE869C9E2E9517155 /* Pods_Memeolist.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01CF3BB520EBA7C30026EC7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E45495AEB965518F5E8E27 /* Pods_MemeolistTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01CF3B9920EBA7C20026EC7F = {
+			isa = PBXGroup;
+			children = (
+				01CF3BA420EBA7C20026EC7F /* Memeolist */,
+				01CF3BBB20EBA7C30026EC7F /* MemeolistTests */,
+				01CF3BA320EBA7C20026EC7F /* Products */,
+				D54C9B7D55810527879C407B /* Pods */,
+				25C6B3E5BE5BDF4046C61FB0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		01CF3BA320EBA7C20026EC7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01CF3BA220EBA7C20026EC7F /* Memeolist.app */,
+				01CF3BB820EBA7C30026EC7F /* MemeolistTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01CF3BA420EBA7C20026EC7F /* Memeolist */ = {
+			isa = PBXGroup;
+			children = (
+				01CF3BD220EBC55B0026EC7F /* model */,
+				01CF3BC720EBA8150026EC7F /* view */,
+				01CF3BA520EBA7C20026EC7F /* AppDelegate.swift */,
+				01CF3BDF20EBE63F0026EC7F /* GeneratedAPI.swift */,
+				01CF3BCC20EBC3D80026EC7F /* schema.json */,
+				01CF3BAB20EBA7C20026EC7F /* Main.storyboard */,
+				01CF3BAE20EBA7C30026EC7F /* Assets.xcassets */,
+				01CF3BB020EBA7C30026EC7F /* LaunchScreen.storyboard */,
+				01CF3BB320EBA7C30026EC7F /* Info.plist */,
+			);
+			path = Memeolist;
+			sourceTree = "<group>";
+		};
+		01CF3BBB20EBA7C30026EC7F /* MemeolistTests */ = {
+			isa = PBXGroup;
+			children = (
+				01CF3BBC20EBA7C30026EC7F /* MemeolistTests.swift */,
+				01CF3BBE20EBA7C30026EC7F /* Info.plist */,
+			);
+			path = MemeolistTests;
+			sourceTree = "<group>";
+		};
+		01CF3BC720EBA8150026EC7F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				01CF3BC920EBA8730026EC7F /* create-meme */,
+				01CF3BC820EBA85D0026EC7F /* list-meme */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		01CF3BC820EBA85D0026EC7F /* list-meme */ = {
+			isa = PBXGroup;
+			children = (
+				01CF3BD720EBD0D90026EC7F /* MemesTableViewCell.swift */,
+				01CF3BCD20EBC3D80026EC7F /* MemesListViewController.graphql */,
+				01CF3BA720EBA7C20026EC7F /* MemesListViewController.swift */,
+			);
+			path = "list-meme";
+			sourceTree = "<group>";
+		};
+		01CF3BC920EBA8730026EC7F /* create-meme */ = {
+			isa = PBXGroup;
+			children = (
+				01CF3BA920EBA7C20026EC7F /* CreateMemeController.swift */,
+				01CF3BD520EBCD760026EC7F /* CreateMemeController.graphql */,
+			);
+			path = "create-meme";
+			sourceTree = "<group>";
+		};
+		01CF3BD220EBC55B0026EC7F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				01CF3BD320EBC89F0026EC7F /* Meme.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		25C6B3E5BE5BDF4046C61FB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67EB0502C70202F5FE272F97 /* Pods_Memeolist.framework */,
+				944BD0AFF97A08EC8B3F287D /* Pods_MemeolistTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D54C9B7D55810527879C407B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B4710A7D563656E8F61DA39 /* Pods-Memeolist.debug.xcconfig */,
+				82C712065C38FFA0E20F0896 /* Pods-Memeolist.release.xcconfig */,
+				0C1F746F90DEF7248673F78D /* Pods-MemeolistTests.debug.xcconfig */,
+				5E5DC583C41CD2D181C3EA79 /* Pods-MemeolistTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01CF3BA120EBA7C20026EC7F /* Memeolist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01CF3BC120EBA7C30026EC7F /* Build configuration list for PBXNativeTarget "Memeolist" */;
+			buildPhases = (
+				946DCC478712CAB6BBA60399 /* [CP] Check Pods Manifest.lock */,
+				01CF3BCB20EBC0ED0026EC7F /* ShellScript */,
+				01CF3B9E20EBA7C20026EC7F /* Sources */,
+				01CF3B9F20EBA7C20026EC7F /* Frameworks */,
+				01CF3BA020EBA7C20026EC7F /* Resources */,
+				F0214DB9FA1CC97A02AEE0A1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Memeolist;
+			productName = Memeolist;
+			productReference = 01CF3BA220EBA7C20026EC7F /* Memeolist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01CF3BB720EBA7C30026EC7F /* MemeolistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01CF3BC420EBA7C30026EC7F /* Build configuration list for PBXNativeTarget "MemeolistTests" */;
+			buildPhases = (
+				4A6169798CEB5A470A180D63 /* [CP] Check Pods Manifest.lock */,
+				01CF3BB420EBA7C30026EC7F /* Sources */,
+				01CF3BB520EBA7C30026EC7F /* Frameworks */,
+				01CF3BB620EBA7C30026EC7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01CF3BBA20EBA7C30026EC7F /* PBXTargetDependency */,
+			);
+			name = MemeolistTests;
+			productName = MemeolistTests;
+			productReference = 01CF3BB820EBA7C30026EC7F /* MemeolistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01CF3B9A20EBA7C20026EC7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = AeroGear;
+				TargetAttributes = {
+					01CF3BA120EBA7C20026EC7F = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					01CF3BB720EBA7C30026EC7F = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 01CF3BA120EBA7C20026EC7F;
+					};
+				};
+			};
+			buildConfigurationList = 01CF3B9D20EBA7C20026EC7F /* Build configuration list for PBXProject "Memeolist" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01CF3B9920EBA7C20026EC7F;
+			productRefGroup = 01CF3BA320EBA7C20026EC7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01CF3BA120EBA7C20026EC7F /* Memeolist */,
+				01CF3BB720EBA7C30026EC7F /* MemeolistTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01CF3BA020EBA7C20026EC7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CF3BCE20EBC3D80026EC7F /* schema.json in Resources */,
+				01CF3BD620EBCD760026EC7F /* CreateMemeController.graphql in Resources */,
+				01CF3BB220EBA7C30026EC7F /* LaunchScreen.storyboard in Resources */,
+				01CF3BAF20EBA7C30026EC7F /* Assets.xcassets in Resources */,
+				01CF3BAD20EBA7C20026EC7F /* Main.storyboard in Resources */,
+				01CF3BCF20EBC3D80026EC7F /* MemesListViewController.graphql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01CF3BB620EBA7C30026EC7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01CF3BCB20EBC0ED0026EC7F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output GeneratedAPI.swift";
+		};
+		4A6169798CEB5A470A180D63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemeolistTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		946DCC478712CAB6BBA60399 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Memeolist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0214DB9FA1CC97A02AEE0A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Memeolist/Pods-Memeolist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Memeolist/Pods-Memeolist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01CF3B9E20EBA7C20026EC7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CF3BAA20EBA7C20026EC7F /* CreateMemeController.swift in Sources */,
+				01CF3BA620EBA7C20026EC7F /* AppDelegate.swift in Sources */,
+				01CF3BA820EBA7C20026EC7F /* MemesListViewController.swift in Sources */,
+				01CF3BD420EBC89F0026EC7F /* Meme.swift in Sources */,
+				01CF3BE020EBE63F0026EC7F /* GeneratedAPI.swift in Sources */,
+				01CF3BD820EBD0D90026EC7F /* MemesTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01CF3BB420EBA7C30026EC7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CF3BBD20EBA7C30026EC7F /* MemeolistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01CF3BBA20EBA7C30026EC7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01CF3BA120EBA7C20026EC7F /* Memeolist */;
+			targetProxy = 01CF3BB920EBA7C30026EC7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01CF3BAB20EBA7C20026EC7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01CF3BAC20EBA7C20026EC7F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01CF3BB020EBA7C30026EC7F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01CF3BB120EBA7C30026EC7F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01CF3BBF20EBA7C30026EC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01CF3BC020EBA7C30026EC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01CF3BC220EBA7C30026EC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4710A7D563656E8F61DA39 /* Pods-Memeolist.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT7PDSM4X9;
+				INFOPLIST_FILE = Memeolist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.memeolist.Memeolist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01CF3BC320EBA7C30026EC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82C712065C38FFA0E20F0896 /* Pods-Memeolist.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT7PDSM4X9;
+				INFOPLIST_FILE = Memeolist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.memeolist.Memeolist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		01CF3BC520EBA7C30026EC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1F746F90DEF7248673F78D /* Pods-MemeolistTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT7PDSM4X9;
+				INFOPLIST_FILE = MemeolistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.memeolist.MemeolistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memeolist.app/Memeolist";
+			};
+			name = Debug;
+		};
+		01CF3BC620EBA7C30026EC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E5DC583C41CD2D181C3EA79 /* Pods-MemeolistTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT7PDSM4X9;
+				INFOPLIST_FILE = MemeolistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.memeolist.MemeolistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memeolist.app/Memeolist";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01CF3B9D20EBA7C20026EC7F /* Build configuration list for PBXProject "Memeolist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01CF3BBF20EBA7C30026EC7F /* Debug */,
+				01CF3BC020EBA7C30026EC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01CF3BC120EBA7C30026EC7F /* Build configuration list for PBXNativeTarget "Memeolist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01CF3BC220EBA7C30026EC7F /* Debug */,
+				01CF3BC320EBA7C30026EC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01CF3BC420EBA7C30026EC7F /* Build configuration list for PBXNativeTarget "MemeolistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01CF3BC520EBA7C30026EC7F /* Debug */,
+				01CF3BC620EBA7C30026EC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01CF3B9A20EBA7C20026EC7F /* Project object */;
+}

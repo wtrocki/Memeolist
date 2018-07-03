@@ -1,0 +1,12 @@
+query AllMemes {
+    memes: allMemes(orderBy: id_DESC) {
+        ...MemeDetails
+    }
+}
+
+fragment MemeDetails on Meme {
+    id
+    title
+    photoUrl
+    votes
+}
