@@ -8,6 +8,7 @@ target 'Memeolist' do
   # Pods for Memeolist
   pod "Apollo"
   pod "Kingfisher"
+  pod "Alamofire"
   
   target 'MemeolistTests' do
     inherit! :search_paths
