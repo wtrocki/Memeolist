@@ -4,3 +4,11 @@ mutation CreateMeme($title: String!, $photoUrl: String!) {
     ...MemeDetails
     }
 }
+
+mutation newMeme($url: String!) {
+  createMeme(photoUrl: $url) {
+    id
+    photoUrl
+  }
+}
+

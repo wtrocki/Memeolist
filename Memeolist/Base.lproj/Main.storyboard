@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Wf-gm-MRI">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,7 +17,7 @@
             <objects>
                 <navigationController id="5Wf-gm-MRI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o3W-Y7-Dfr">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -33,62 +33,62 @@
             <objects>
                 <tableViewController id="nq0-PW-Tk1" customClass="MemesListViewController" customModule="Memeolist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="t3w-Sa-Kvx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="428" id="TNy-o3-ukg" customClass="MemesTableViewCell" customModule="Memeolist" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="428"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="428"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="TNy-o3-ukg" id="ZQ5-W3-b26">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="427.66666666666669"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="427.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="NeK-mF-YeS" userLabel="avatar">
-                                            <rect key="frame" x="20" y="19" width="50" height="50"/>
+                                            <rect key="frame" x="16" y="19" width="50" height="50.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="NeK-mF-YeS" secondAttribute="height" multiplier="1:1" id="faq-VO-Ih3"/>
                                                 <constraint firstAttribute="width" constant="50" id="jVa-2F-xHU"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="memeolist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-Ku-J82" userLabel="user">
-                                            <rect key="frame" x="73" y="35" width="76.666666666666686" height="18"/>
+                                            <rect key="frame" x="69" y="35.5" width="76.5" height="18"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="textColor" red="0.80392156862745101" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_bubble_outline" translatesAutoresizingMaskIntoConstraints="NO" id="22q-01-khm" userLabel="meme">
-                                            <rect key="frame" x="10" y="79.000000000000028" width="394" height="394.66666666666674"/>
+                                            <rect key="frame" x="10" y="79.5" width="355" height="355"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="22q-01-khm" secondAttribute="height" multiplier="1:1" id="DW7-gB-wD5"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_bubble_outline" translatesAutoresizingMaskIntoConstraints="NO" id="VFI-aP-PgM" userLabel="comments">
-                                            <rect key="frame" x="381.66666666666669" y="483.66666666666669" width="24.333333333333314" height="24"/>
+                                            <rect key="frame" x="342.5" y="444.5" width="24.5" height="24"/>
                                             <color key="tintColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="VFI-aP-PgM" secondAttribute="height" multiplier="1:1" id="dQW-0J-yw4"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite_border" translatesAutoresizingMaskIntoConstraints="NO" id="d2O-x6-uGc" userLabel="like">
-                                            <rect key="frame" x="346.66666666666669" y="483.66666666666669" width="25" height="24"/>
+                                            <rect key="frame" x="307.5" y="444.5" width="25" height="24"/>
                                             <color key="tintColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite" translatesAutoresizingMaskIntoConstraints="NO" id="JoP-FA-YF4">
-                                            <rect key="frame" x="8" y="487" width="18" height="18"/>
+                                            <rect key="frame" x="8" y="447.5" width="18" height="18"/>
                                             <color key="tintColor" red="0.80392156862745101" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="JoP-FA-YF4" secondAttribute="height" multiplier="1:1" id="eop-M3-oGy"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="182,465 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nve-BR-GbC" userLabel="likes">
-                                            <rect key="frame" x="30" y="489" width="76" height="15"/>
+                                            <rect key="frame" x="30" y="449.5" width="76" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="1" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-0f-tBU">
-                                            <rect key="frame" x="376" y="33.666666666666664" width="28" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-0f-tBU" userLabel="time">
+                                            <rect key="frame" x="337" y="34.5" width="28" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.95478381849315064" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -121,9 +121,10 @@
                                         <constraint firstItem="dQt-Ku-J82" firstAttribute="centerY" secondItem="NeK-mF-YeS" secondAttribute="centerY" id="xsx-0j-gwz"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="likesLabel" destination="nve-BR-GbC" id="Tzh-Mx-VyV"/>
                                     <outlet property="memeImageView" destination="22q-01-khm" id="8h5-Fk-20p"/>
                                 </connections>
                             </tableViewCell>
@@ -152,17 +153,17 @@
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="CreateMemeController" customModule="Memeolist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vOD-BU-2x8" userLabel="Meme">
-                                <rect key="frame" x="20" y="91" width="374" height="374"/>
+                                <rect key="frame" x="20" y="91" width="335" height="335"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vOD-BU-2x8" secondAttribute="height" multiplier="1:1" id="2Jq-FF-xuY"/>
                                 </constraints>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAc-PH-bo4">
-                                <rect key="frame" x="45" y="101" width="324" height="46.333333333333343"/>
+                                <rect key="frame" x="45" y="101" width="285" height="40.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nAc-PH-bo4" secondAttribute="height" multiplier="7:1" id="Vgg-C6-B3G"/>
                                 </constraints>
@@ -171,7 +172,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Top text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WW3-bL-OVH">
-                                <rect key="frame" x="25" y="475" width="364" height="40"/>
+                                <rect key="frame" x="25" y="436" width="325" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="OOi-JQ-DVV"/>
                                 </constraints>
@@ -183,7 +184,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bottom text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5n-H7-7Gy">
-                                <rect key="frame" x="25" y="539" width="364" height="40"/>
+                                <rect key="frame" x="25" y="500" width="325" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="pAf-05-Bog"/>
                                 </constraints>
@@ -195,7 +196,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bce-GU-fMD">
-                                <rect key="frame" x="277" y="586" width="110" height="40"/>
+                                <rect key="frame" x="238" y="547" width="110" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.18265732020547945" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1Pw-gF-dhW"/>
@@ -205,9 +206,12 @@
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createMemeAction:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="cZm-bT-aAS"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0a-lh-mrr">
-                                <rect key="frame" x="80.666666666666686" y="412" width="253" height="36"/>
+                                <rect key="frame" x="61" y="373" width="253" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="j0a-lh-mrr" secondAttribute="height" multiplier="7:1" constant="1" id="pXD-jD-U4E"/>
                                 </constraints>

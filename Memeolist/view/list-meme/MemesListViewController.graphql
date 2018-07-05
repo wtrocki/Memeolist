@@ -6,7 +6,21 @@ query AllMemes {
 
 fragment MemeDetails on Meme {
     id
-    title
     photoUrl
     votes
+}
+
+
+subscription createMeme {
+  Meme(
+    filter: {
+      mutation_in: [CREATED]
+    }
+  ) {
+    mutation
+    node {
+      id
+      photoUrl
+    }
+  }
 }
