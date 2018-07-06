@@ -37,7 +37,7 @@ class MemesListViewController: UITableViewController {
 
             self.memes = result?.data?.memes
         }
-        watcher?.refetch();
+        watcher?.refetch()
     }
 
     // MARK: - UITableViewDataSource

@@ -12,9 +12,9 @@ class MemesTableViewCell: UITableViewCell {
     func configure(with meme: MemeDetails) {
         memeId = meme.id
         let url = URL(string: meme.photoUrl)
-        memeImageView.kf.setImage(with: url)
+        memeImageView.kf.setImage(with: url, placeholder: UIImage(named: "loading"))
         likesLabel?.text = "\(meme.votes ?? 0) likes"
-        self.selectionStyle = UITableViewCellSelectionStyle.none;
+        self.selectionStyle = UITableViewCellSelectionStyle.none
     }
 
     @IBAction func upvote() {
