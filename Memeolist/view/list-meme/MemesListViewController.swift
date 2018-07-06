@@ -29,7 +29,7 @@ class MemesListViewController: UITableViewController {
     var watcher: GraphQLQueryWatcher<AllMemesQuery>?
 
     func loadData() {
-        watcher = apollo.watch(query: AllMemesQuery()) { result, error in
+        watcher = SyncService.instance.client.watch(query: AllMemesQuery()) { result, error in
             if let error = error {
                 NSLog("Error while fetching query: \(error.localizedDescription)")
                 return
@@ -37,6 +37,7 @@ class MemesListViewController: UITableViewController {
 
             self.memes = result?.data?.memes
         }
+        watcher?.refetch();
     }
 
     // MARK: - UITableViewDataSource

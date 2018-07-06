@@ -5,8 +5,8 @@ mutation CreateMeme($title: String!, $photoUrl: String!) {
     }
 }
 
-mutation newMeme($url: String!) {
-  createMeme(photoUrl: $url) {
+mutation newMeme($url: String!, $votes: Int) {
+  createMeme(photoUrl: $url, votes: $votes) {
     id
     photoUrl
   }

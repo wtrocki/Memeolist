@@ -171,23 +171,25 @@ public final class CreateMemeMutation: GraphQLMutation {
 
 public final class NewMemeMutation: GraphQLMutation {
   public let operationDefinition =
-    "mutation newMeme($url: String!) {\n  createMeme(photoUrl: $url) {\n    __typename\n    id\n    photoUrl\n  }\n}"
+    "mutation newMeme($url: String!, $votes: Int) {\n  createMeme(photoUrl: $url, votes: $votes) {\n    __typename\n    id\n    photoUrl\n  }\n}"
 
   public var url: String
+  public var votes: Int?
 
-  public init(url: String) {
+  public init(url: String, votes: Int? = nil) {
     self.url = url
+    self.votes = votes
   }
 
   public var variables: GraphQLMap? {
-    return ["url": url]
+    return ["url": url, "votes": votes]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes = ["Mutation"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("createMeme", arguments: ["photoUrl": GraphQLVariable("url")], type: .object(CreateMeme.selections)),
+      GraphQLField("createMeme", arguments: ["photoUrl": GraphQLVariable("url"), "votes": GraphQLVariable("votes")], type: .object(CreateMeme.selections)),
     ]
 
     public private(set) var resultMap: ResultMap

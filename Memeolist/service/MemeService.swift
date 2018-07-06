@@ -50,10 +50,13 @@ public class MemeService {
             }
         })
     }
-
+    
     public func createMemeUrl(imageUrl: String, top: String, bottom: String) -> String {
-        return "https://memegen.link/custom/" +
-            top + "/" + bottom + ".jpg" +
-            "?alt=" + imageUrl + "&font=opensans-extrabold"
+        let topText =  top.replacingOccurrences(of: " ", with: "_")
+        let bottomText =  bottom.replacingOccurrences(of: " ", with: "_")
+        return "https://memegen.link/custom/"  + topText + "/" + bottomText + ".jpg" +
+            "?alt=" + imageUrl + "&font=opensans-extrabold";
     }
+
+
 }

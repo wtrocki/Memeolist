@@ -1,6 +1,9 @@
 import UIKit
+import UIImageCropper
 
-class CreateMemeController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateMemeController: UIViewController,
+                            UINavigationControllerDelegate,
+                            UIImageCropperProtocol {
 
     @IBOutlet var memeView: UIImageView!
     @IBOutlet var topText: UILabel!
@@ -8,40 +11,58 @@ class CreateMemeController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet var topTextEdit: UITextField!
     @IBOutlet var bottomTextEdit: UITextField!
     @IBOutlet var createButton: UIButton!
-
+    
+    private var publishImage: Bool = false;
+    
     private let imagePicker = UIImagePickerController()
-
+    private let cropper = UIImageCropper(cropRatio: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreateMemeController.singleTapping(recognizer:)))
         singleTap.numberOfTapsRequired = 1
         memeView.addGestureRecognizer(singleTap)
-        imagePicker.delegate = self
+        cropper.picker = imagePicker
+        cropper.delegate = self
+        cropper.cropButtonText = "Crop"
+        cropper.cancelButtonText = "Cancel"
+
     }
 
     @objc func singleTapping(recognizer: UIGestureRecognizer) {
-        print("image clicked")
-        imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
-
-        present(imagePicker, animated: true, completion: nil)
-        topText.isHidden = false
-        bottomText.isHidden = false
+        present(imagePicker, animated: true, completion: {
+            self.topText.isHidden = false
+            self.bottomText.isHidden = false
+        })
     }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            memeView.contentMode = .scaleAspectFit
-            memeView.image = pickedImage
+    
+    func didCropImage(originalImage: UIImage?, croppedImage: UIImage?) {
+        memeView.contentMode = .scaleToFill
+        memeView.image = croppedImage
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func didCancel() {
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+ 
+    fileprivate func createMemeInGraphql(_ rawMemeUrl: String,_ indicator: UIActivityIndicatorView) {
+        let url = MemeService.instance.createMemeUrl(imageUrl: rawMemeUrl,
+                                            top:  self.topTextEdit.text ?? "",
+                                            bottom: self.bottomTextEdit.text ?? "")
+        
+        SyncService.instance.client.perform(mutation: NewMemeMutation(url: url, votes: 2)) { (result, error) in
+            indicator.stopAnimating()
+            let alert = UIAlertController(title: "Success", message: "Meme created", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: {
+                 self.navigationController?.popToRootViewController(animated: true)
+            })
+            return
         }
-
-        dismiss(animated: true, completion: nil)
     }
-
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-
+    
     @IBAction func createMemeAction(_ sender: Any) {
         guard let image = self.memeView.image else {
             let alert = UIAlertController(title: "Missing image", message: "Need to add image to build meme", preferredStyle: UIAlertControllerStyle.alert)
@@ -56,26 +77,20 @@ class CreateMemeController: UIViewController, UIImagePickerControllerDelegate, U
         self.view.bringSubview(toFront: indicator)
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         indicator.startAnimating()
-        let memeService = MemeService.instance
-        memeService.publishRawImage(image, "Undefined", { error, url in
-            guard let rawMemeUrl = url else {
-                let alert = UIAlertController(title: "Problem with uploading image.", message: "Cannot upload meme image", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true, completion: nil)
-                return
-            }
-            let url = memeService.createMemeUrl(imageUrl: rawMemeUrl,
-                                                top:  self.topTextEdit.text ?? "",
-                                                bottom: self.bottomTextEdit.text ?? "")
-            
-            apollo.perform(mutation: NewMemeMutation(url: url)) { (result, error) in
-                indicator.stopAnimating()
-                let alert = UIAlertController(title: "Meme created.", message: "Meme created", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true, completion: nil)
-                return
-            }
-        })
+        if publishImage {
+            MemeService.instance.publishRawImage(image, "Undefined", { error, url in
+                guard let rawMemeUrl = url else {
+                    let alert = UIAlertController(title: "Problem with uploading image.", message: "Cannot upload meme image", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+                self.createMemeInGraphql(rawMemeUrl, indicator);
+            })
+        } else {
+            // Testing only
+             self.createMemeInGraphql("", indicator)
+        }
     }
 
     @IBAction func topTextChanged(_ sender: Any) {

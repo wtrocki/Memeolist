@@ -14,6 +14,7 @@ class MemesTableViewCell: UITableViewCell {
         let url = URL(string: meme.photoUrl)
         memeImageView.kf.setImage(with: url)
         likesLabel?.text = "\(meme.votes ?? 0) likes"
+        self.selectionStyle = UITableViewCellSelectionStyle.none;
     }
 
     @IBAction func upvote() {

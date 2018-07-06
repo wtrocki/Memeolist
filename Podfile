@@ -9,6 +9,10 @@ target 'Memeolist' do
   pod "Apollo"
   pod "Kingfisher"
   pod "Alamofire"
+
+  ## Helpers
+  pod 'UIImageCropper'
+  pod 'IQKeyboardManagerSwift'
   
   target 'MemeolistTests' do
     inherit! :search_paths
