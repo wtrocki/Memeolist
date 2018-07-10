@@ -10,6 +10,9 @@ target 'Memeolist' do
   pod "Kingfisher"
   pod "Alamofire"
 
+  ## SDK pods
+  pod 'AGSSecurity'
+
   ## Helpers
   pod 'UIImageCropper'
   pod 'IQKeyboardManagerSwift'

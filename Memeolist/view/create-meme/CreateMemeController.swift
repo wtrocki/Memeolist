@@ -97,7 +97,7 @@ class CreateMemeController: UIViewController,
                 self.createMemeInGraphql(rawMemeUrl, indicator)
             })
         } else {
-            // Testing only
+            // Testing only. Do not upload image to imgur
             self.createMemeInGraphql("", indicator)
         }
     }

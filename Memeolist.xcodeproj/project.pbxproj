@@ -20,6 +20,11 @@
 		01CF3BD620EBCD760026EC7F /* CreateMemeController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 01CF3BD520EBCD760026EC7F /* CreateMemeController.graphql */; };
 		01CF3BD820EBD0D90026EC7F /* MemesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BD720EBD0D90026EC7F /* MemesTableViewCell.swift */; };
 		01CF3BE020EBE63F0026EC7F /* GeneratedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF3BDF20EBE63F0026EC7F /* GeneratedAPI.swift */; };
+		01D0E6C220EFD47D00A96011 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D0E6C120EFD47D00A96011 /* Login.xib */; };
+		01D0E6C420EFD64800A96011 /* CreateMemeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D0E6C320EFD64800A96011 /* CreateMemeView.xib */; };
+		01D0E6C620EFD67300A96011 /* ListMeme.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D0E6C520EFD67300A96011 /* ListMeme.xib */; };
+		01D0E6C820EFD84200A96011 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0E6C720EFD84200A96011 /* LoginController.swift */; };
+		01D0E6CA20EFD85000A96011 /* CreateMemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0E6C920EFD85000A96011 /* CreateMemeView.swift */; };
 		41C27A6CE869C9E2E9517155 /* Pods_Memeolist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EB0502C70202F5FE272F97 /* Pods_Memeolist.framework */; };
 		76E45495AEB965518F5E8E27 /* Pods_MemeolistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944BD0AFF97A08EC8B3F287D /* Pods_MemeolistTests.framework */; };
 		8A58B0B420EC18CA00ABE5B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A58B0B320EC18CA00ABE5B1 /* Assets.xcassets */; };
@@ -53,6 +58,11 @@
 		01CF3BD520EBCD760026EC7F /* CreateMemeController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateMemeController.graphql; sourceTree = "<group>"; };
 		01CF3BD720EBD0D90026EC7F /* MemesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemesTableViewCell.swift; sourceTree = "<group>"; };
 		01CF3BDF20EBE63F0026EC7F /* GeneratedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedAPI.swift; sourceTree = "<group>"; };
+		01D0E6C120EFD47D00A96011 /* Login.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
+		01D0E6C320EFD64800A96011 /* CreateMemeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateMemeView.xib; sourceTree = "<group>"; };
+		01D0E6C520EFD67300A96011 /* ListMeme.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListMeme.xib; sourceTree = "<group>"; };
+		01D0E6C720EFD84200A96011 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		01D0E6C920EFD85000A96011 /* CreateMemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemeView.swift; sourceTree = "<group>"; };
 		0C1F746F90DEF7248673F78D /* Pods-MemeolistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeolistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemeolistTests/Pods-MemeolistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B4710A7D563656E8F61DA39 /* Pods-Memeolist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memeolist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memeolist/Pods-Memeolist.debug.xcconfig"; sourceTree = "<group>"; };
 		5E5DC583C41CD2D181C3EA79 /* Pods-MemeolistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeolistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemeolistTests/Pods-MemeolistTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +149,7 @@
 		01CF3BC720EBA8150026EC7F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				01D0E6C020EFD46200A96011 /* login */,
 				01CF3BC920EBA8730026EC7F /* create-meme */,
 				01CF3BC820EBA85D0026EC7F /* list-meme */,
 			);
@@ -151,6 +162,7 @@
 				01CF3BD720EBD0D90026EC7F /* MemesTableViewCell.swift */,
 				01CF3BCD20EBC3D80026EC7F /* MemesListViewController.graphql */,
 				01CF3BA720EBA7C20026EC7F /* MemesListViewController.swift */,
+				01D0E6C520EFD67300A96011 /* ListMeme.xib */,
 			);
 			path = "list-meme";
 			sourceTree = "<group>";
@@ -160,8 +172,19 @@
 			children = (
 				01CF3BA920EBA7C20026EC7F /* CreateMemeController.swift */,
 				01CF3BD520EBCD760026EC7F /* CreateMemeController.graphql */,
+				01D0E6C320EFD64800A96011 /* CreateMemeView.xib */,
+				01D0E6C920EFD85000A96011 /* CreateMemeView.swift */,
 			);
 			path = "create-meme";
+			sourceTree = "<group>";
+		};
+		01D0E6C020EFD46200A96011 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				01D0E6C120EFD47D00A96011 /* Login.xib */,
+				01D0E6C720EFD84200A96011 /* LoginController.swift */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 		25C6B3E5BE5BDF4046C61FB0 /* Frameworks */ = {
@@ -272,9 +295,12 @@
 				01CF3BCE20EBC3D80026EC7F /* schema.json in Resources */,
 				01CF3BD620EBCD760026EC7F /* CreateMemeController.graphql in Resources */,
 				01CF3BB220EBA7C30026EC7F /* LaunchScreen.storyboard in Resources */,
+				01D0E6C220EFD47D00A96011 /* Login.xib in Resources */,
 				01CF3BAD20EBA7C20026EC7F /* Main.storyboard in Resources */,
+				01D0E6C620EFD67300A96011 /* ListMeme.xib in Resources */,
 				8A58B0B420EC18CA00ABE5B1 /* Assets.xcassets in Resources */,
 				01CF3BCF20EBC3D80026EC7F /* MemesListViewController.graphql in Resources */,
+				01D0E6C420EFD64800A96011 /* CreateMemeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,8 +399,10 @@
 				01CF3BAA20EBA7C20026EC7F /* CreateMemeController.swift in Sources */,
 				01CF3BA620EBA7C20026EC7F /* AppDelegate.swift in Sources */,
 				0110647A20EE593C00547C63 /* SyncService.swift in Sources */,
+				01D0E6CA20EFD85000A96011 /* CreateMemeView.swift in Sources */,
 				0110647620EE58FE00547C63 /* MemeService.swift in Sources */,
 				01CF3BA820EBA7C20026EC7F /* MemesListViewController.swift in Sources */,
+				01D0E6C820EFD84200A96011 /* LoginController.swift in Sources */,
 				01CF3BE020EBE63F0026EC7F /* GeneratedAPI.swift in Sources */,
 				01CF3BD820EBD0D90026EC7F /* MemesTableViewCell.swift in Sources */,
 			);
@@ -540,7 +568,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT7PDSM4X9;
 				INFOPLIST_FILE = Memeolist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.memeolist.Memeolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -556,7 +587,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT7PDSM4X9;
 				INFOPLIST_FILE = Memeolist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.memeolist.Memeolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -573,7 +607,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT7PDSM4X9;
 				INFOPLIST_FILE = MemeolistTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.memeolist.MemeolistTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -591,7 +629,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT7PDSM4X9;
 				INFOPLIST_FILE = MemeolistTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.aerogear.memeolist.MemeolistTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
