@@ -12,7 +12,7 @@ class CreateMemeController: UIViewController,
     @IBOutlet var bottomTextEdit: UITextField!
     @IBOutlet var createButton: UIButton!
 
-    private var publishImage: Bool = false
+    private var publishImage: Bool = true
 
     private let imagePicker = UIImagePickerController()
     private let cropper = UIImageCropper(cropRatio: 1)
@@ -55,10 +55,11 @@ class CreateMemeController: UIViewController,
             indicator.stopAnimating()
             if result != nil {
                 let alert = UIAlertController(title: "Success", message: "Meme created", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true, completion: {
-                    self.navigationController?.popToRootViewController(animated: true)
+                let action = UIAlertAction(title: "OK", style: .default, handler: {
+                    action in self.navigationController?.popToRootViewController(animated: true);
                 })
+                alert.addAction(action)
+                self.present(alert, animated: true)
             } else {
                 let alert = UIAlertController(title: "Error", message: "Failed to create meme", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))

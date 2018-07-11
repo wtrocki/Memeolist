@@ -1,0 +1,21 @@
+{
+    "version": 1.0,
+    "clusterName": "192.168.64.74:8443",
+    "namespace": "myproject",
+    "clientId": "example_client_id",
+    "services": [
+    {
+        "id": "keycloak",
+        "name": "keycloak",
+        "type": "keycloak",
+        "url": "https://keycloak.security.feedhenry.org/auth",
+         "config": {
+             "auth-server-url": "https://keycloak.security.feedhenry.org/auth",
+             "realm": "Memeolist",
+             "resource": "ios-app",
+             "ssl-required": "external",
+             "public-client": true
+         }
+    }
+    ]
+}

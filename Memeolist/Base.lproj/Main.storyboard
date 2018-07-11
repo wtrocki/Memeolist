@@ -15,7 +15,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qfz-F2-251">
             <objects>
-                <navigationController id="5Wf-gm-MRI" sceneMemberID="viewController">
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Wf-gm-MRI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o3W-Y7-Dfr">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,7 +31,7 @@
         <!--Memeolist-->
         <scene sceneID="rJA-xn-3Bu">
             <objects>
-                <tableViewController id="nq0-PW-Tk1" customClass="MemesListViewController" customModule="Memeolist" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="memeListViewController" id="nq0-PW-Tk1" customClass="MemesListViewController" customModule="Memeolist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="t3w-Sa-Kvx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,9 +146,13 @@
                             <outlet property="delegate" destination="nq0-PW-Tk1" id="c7D-rC-BT0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Discover" image="second" id="Y2W-lB-yri" userLabel="Discover"/>
                     <navigationItem key="navigationItem" title="Memeolist" id="TnJ-Wo-L9R">
                         <barButtonItem key="backBarButtonItem" title="Back" id="byr-rD-HnF"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="cNg-ja-1Lu">
+                            <connections>
+                                <action selector="onLogout:" destination="nq0-PW-Tk1" id="miQ-UN-bnb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2cK-JU-mqK">
                             <connections>
                                 <segue destination="8rJ-Kc-sve" kind="show" id="OmE-Mb-n2w"/>
@@ -255,7 +259,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create" image="second" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" title="Create Meme" id="MQg-Kt-g5g" userLabel="Create meme">
                         <barButtonItem key="backBarButtonItem" title="Back" id="SKt-yi-fsi"/>
                     </navigationItem>
@@ -279,7 +282,6 @@
         <image name="favorite" width="18" height="18"/>
         <image name="favorite_border" width="24" height="24"/>
         <image name="placeholder" width="850" height="845"/>
-        <image name="second" width="30" height="30"/>
         <image name="time" width="256" height="256"/>
     </resources>
 </document>
