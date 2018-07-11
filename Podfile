@@ -9,6 +9,8 @@ target 'Memeolist' do
   pod "Apollo"
   pod "Kingfisher"
   pod "Alamofire"
+  ## SDK pods
+  pod 'AGSAuth', '1.0.0'
 
   ## Helpers
   pod 'UIImageCropper'

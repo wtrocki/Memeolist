@@ -1,7 +1,8 @@
-import Apollo
 import UIKit
+import AGSAuth
 
 class MemesListViewController: UITableViewController {
+
 
     var memes: [AllMemesQuery.Data.Meme]? {
         didSet {
@@ -25,11 +26,8 @@ class MemesListViewController: UITableViewController {
     }
 
     // MARK: - Data loading
-
-    var watcher: GraphQLQueryWatcher<AllMemesQuery>?
-
     func loadData() {
-        watcher = SyncService.instance.client.watch(query: AllMemesQuery()) { result, error in
+        let watcher = SyncService.instance.client.watch(query: AllMemesQuery()) { result, error in
             if let error = error {
                 NSLog("Error while fetching query: \(error.localizedDescription)")
                 return
@@ -37,7 +35,7 @@ class MemesListViewController: UITableViewController {
 
             self.memes = result?.data?.memes
         }
-        watcher?.refetch()
+        watcher.refetch()
     }
 
     // MARK: - UITableViewDataSource
@@ -58,5 +56,11 @@ class MemesListViewController: UITableViewController {
         cell.configure(with: meme.fragments.memeDetails)
 
         return cell
+    }
+    
+    @IBAction func onLogout(_ sender: Any) {
+         try? AgsAuth.instance.logout(onCompleted: { _ in
+            self.navigationController!.present(UINavigationController(rootViewController: LoginViewController()), animated: true)
+         })
     }
 }
