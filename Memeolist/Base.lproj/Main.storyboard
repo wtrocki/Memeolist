@@ -44,15 +44,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="427.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="NeK-mF-YeS" userLabel="avatar">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="NeK-mF-YeS" userLabel="avatar">
                                             <rect key="frame" x="16" y="19" width="50" height="50.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="NeK-mF-YeS" secondAttribute="height" multiplier="1:1" id="faq-VO-Ih3"/>
                                                 <constraint firstAttribute="width" constant="50" id="jVa-2F-xHU"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="memeolist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-Ku-J82" userLabel="user">
-                                            <rect key="frame" x="69" y="36" width="77" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-Ku-J82" userLabel="user">
+                                            <rect key="frame" x="76" y="36" width="45.5" height="18"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="textColor" red="0.80392156862745101" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,14 +90,14 @@
                                             <color key="textColor" red="1" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-0f-tBU" userLabel="time">
-                                            <rect key="frame" x="337" y="35" width="28" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-0f-tBU" userLabel="time">
+                                            <rect key="frame" x="344.5" y="35" width="20.5" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.95478381849315064" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="NtG-sI-rtM">
-                                            <rect key="frame" x="314" y="34.5" width="20" height="20"/>
+                                            <rect key="frame" x="321.5" y="34.5" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="N60-Rh-4wc"/>
                                                 <constraint firstAttribute="width" constant="20" id="ipF-nJ-v4k"/>
@@ -128,7 +128,7 @@
                                         <constraint firstItem="d2O-x6-uGc" firstAttribute="width" secondItem="VFI-aP-PgM" secondAttribute="width" id="gWt-zD-09P"/>
                                         <constraint firstItem="C7B-0f-tBU" firstAttribute="centerY" secondItem="dQt-Ku-J82" secondAttribute="centerY" id="hl6-9r-Uzl"/>
                                         <constraint firstAttribute="trailing" secondItem="22q-01-khm" secondAttribute="trailing" constant="10" id="iop-nU-vrK"/>
-                                        <constraint firstItem="dQt-Ku-J82" firstAttribute="leading" secondItem="NeK-mF-YeS" secondAttribute="trailing" constant="3" id="jWz-Ui-ZjF"/>
+                                        <constraint firstItem="dQt-Ku-J82" firstAttribute="leading" secondItem="NeK-mF-YeS" secondAttribute="trailing" constant="10" id="jWz-Ui-ZjF"/>
                                         <constraint firstItem="NtG-sI-rtM" firstAttribute="centerY" secondItem="NeK-mF-YeS" secondAttribute="centerY" id="wuL-1O-Vtt"/>
                                         <constraint firstItem="dQt-Ku-J82" firstAttribute="centerY" secondItem="NeK-mF-YeS" secondAttribute="centerY" id="xsx-0j-gwz"/>
                                     </constraints>
@@ -277,11 +277,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar" width="256" height="256"/>
         <image name="chat_bubble_outline" width="24" height="24"/>
         <image name="favorite" width="18" height="18"/>
         <image name="favorite_border" width="24" height="24"/>
         <image name="placeholder" width="850" height="845"/>
+        <image name="profile" width="101" height="126"/>
         <image name="time" width="256" height="256"/>
     </resources>
 </document>

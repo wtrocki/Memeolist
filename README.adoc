@@ -2,5 +2,5 @@
 
 Memeolist Graphql example application
 
-image::./images/screen.png[]
+image::./images/main.png[]
 

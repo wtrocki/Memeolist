@@ -51,7 +51,7 @@ class CreateMemeController: UIViewController,
                                                      top: self.topTextEdit.text ?? "",
                                                      bottom: self.bottomTextEdit.text ?? "")
 
-        SyncService.instance.client.perform(mutation: NewMemeMutation(url: url, votes: 2)) { result, error in
+        SyncService.instance.client.perform(mutation: NewMemeMutation(url: url, votes: 1)) { result, error in
             indicator.stopAnimating()
             if result != nil {
                 let alert = UIAlertController(title: "Success", message: "Meme created", preferredStyle: UIAlertControllerStyle.alert)
